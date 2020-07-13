@@ -1,30 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import TodoForm from './components/TodoForm'
+import TodoList from './components/TodoList'
+
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <div className="App-header">
         <h2>Welcome To React With Redux</h2>
       </div>
       <div className="Todo-App">
-        <form>
-          <input type="text" />
-        </form>
-        <div className="Todo-List">
-          <ul>
-            <li>
-              <input type="checkbox" /> Create Static UI
-            </li>
-            <li>
-              <input type="checkbox" /> Create Initial State
-            </li>
-            <li>
-              <input type="checkbox" /> Use State To Render UI
-            </li>
-          </ul>
-        </div>
+        <TodoForm />
+        <TodoList todos={props.todos} />
       </div>
 
 
