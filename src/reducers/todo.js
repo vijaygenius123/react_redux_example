@@ -1,5 +1,9 @@
 const initialState = {
-    todos: []
+    todos: [
+        { id: 1, name: 'Render Static UI', isCompleted: true },
+        { id: 2, name: 'Create Initial State', isCompleted: true },
+        { id: 3, name: 'Use State To Render UI', isCompleted: false }
+    ]
 }
 
 export default (state = initialState, action) => {
