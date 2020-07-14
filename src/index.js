@@ -4,8 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import store from './store'
+import { updateCurrent } from './reducers/todo'
 
-const todoChangeHandler = val => store.dispatch({ type: 'CURRENT_TODO', payload: val })
+
+const todoChangeHandler = val => store.dispatch(updateCurrent(val))
+
 const render = () => {
   const state = store.getState()
   ReactDOM.render(
