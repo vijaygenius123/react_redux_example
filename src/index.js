@@ -3,17 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+import { bindActionCreators } from 'redux'
+
 import store from './store'
 import { updateCurrent } from './reducers/todo'
 
 
-const todoChangeHandler = val => store.dispatch(updateCurrent(val))
+const actions = bindActionCreators({
+  updateCurrent
+}, store.dispatch)
 
 const render = () => {
   const state = store.getState()
   ReactDOM.render(
     <React.StrictMode>
-      <App {...state} currentChange={todoChangeHandler} />
+      <App {...state} currentChange={actions.updateCurrent} />
     </React.StrictMode>,
     document.getElementById('root')
   );
