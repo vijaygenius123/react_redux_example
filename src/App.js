@@ -12,7 +12,7 @@ function App(props) {
         <h2>Welcome To React With Redux</h2>
       </div>
       <div className="Todo-App">
-        <TodoForm />
+        <TodoForm currentTodo={props.currentTodo} currentChange={props.currentChange} />
         <TodoList todos={props.todos} />
       </div>
 
