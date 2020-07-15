@@ -1,19 +1,44 @@
 {
-    "todos": [
-        {
-            "id": 1,
-            "name": "Render Static UI",
-            "isCompleted": true
-        },
-        {
-            "id": 2,
-            "name": "Create Initial State",
-            "isCompleted": true
-        },
-        {
-            "id": 3,
-            "name": "Use State To Render UI",
-            "isCompleted": false
-        }
-    ]
+  "todos": [
+    {
+      "id": 1,
+      "name": "Render Static UI",
+      "isCompleted": true
+    },
+    {
+      "id": 2,
+      "name": "Create Initial State",
+      "isCompleted": true
+    },
+    {
+      "id": 3,
+      "name": "Use State To Render UI",
+      "isCompleted": false
+    },
+    {
+      "name": "New Todo",
+      "isCompleted": false,
+      "id": 4
+    },
+    {
+      "name": "5th Todo",
+      "isCompleted": false,
+      "id": 5
+    },
+    {
+      "name": "6th Todo",
+      "isCompleted": false,
+      "id": 6
+    },
+    {
+      "name": "7th Todo",
+      "isCompleted": false,
+      "id": 7
+    },
+    {
+      "name": "Another Todo",
+      "isCompleted": false,
+      "id": 8
+    }
+  ]
 }
