@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux'
-import { fetchTodos, toggleTodo, deleteTodo } from '../reducers/todo.js'
+import { fetchTodos, toggleTodo, deleteTodo, getVisibleTodos } from '../reducers/todo.js'
 const TodoItem = ({ id, name, isCompleted, toggleTodo, deleteTodo }) => (
     <li key={id}>
         <span className="delete-item">
@@ -28,4 +28,4 @@ const TodoList = (props) => {
         </div>
     )
 }
-export default connect(state => ({ todos: state.todo.todos }), { fetchTodos, toggleTodo, deleteTodo })(TodoList);
+export default connect((state, ownProps) => ({ todos: getVisibleTodos(state.todo.todos, ownProps.filter) }), { fetchTodos, toggleTodo, deleteTodo })(TodoList);

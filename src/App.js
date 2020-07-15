@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import TodoForm from './components/TodoForm'
 import TodoList from './components/TodoList'
@@ -17,7 +17,10 @@ function App(props) {
         <div className="Todo-App">
           <Message />
           <TodoForm />
-          <TodoList />
+          <Route path="/:filter?" render={({ match }) => (
+            <TodoList filter={match.params.filter} />
+          )} />
+
           <Footer />
         </div>
       </Router>
