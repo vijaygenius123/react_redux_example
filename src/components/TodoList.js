@@ -20,4 +20,4 @@ const TodoList = (props) => {
         </div>
     )
 }
-export default connect(state => state, { fetchTodos })(TodoList);
+export default connect(state => ({ todos: state.todo.todos }), { fetchTodos })(TodoList);
